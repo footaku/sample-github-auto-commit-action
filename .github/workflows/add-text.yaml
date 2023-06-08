@@ -1,6 +1,9 @@
 name: Add Text Workflow
 on:
   workflow_call:
+    secrets:
+      PAT:
+        required: true
   workflow_dispatch:
 
 jobs:
