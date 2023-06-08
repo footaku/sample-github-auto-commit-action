@@ -1,0 +1,11 @@
+name: Code-Format and Unit-Test
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  add-text:
+    uses: ./.github/workflows/add-text.yaml
