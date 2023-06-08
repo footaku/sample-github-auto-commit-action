@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  unit-test-coverage:
+  run-test:
     runs-on: ubuntu-latest
 
     permissions:
