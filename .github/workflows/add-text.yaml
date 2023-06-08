@@ -1,10 +1,14 @@
 name: Add Text Workflow
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
-  unit-test-coverage:
+  run-test:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
@@ -19,6 +23,6 @@ jobs:
         run: echo "hoge" >> temp.txt
 
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
         with:
           commit_message: Add text
