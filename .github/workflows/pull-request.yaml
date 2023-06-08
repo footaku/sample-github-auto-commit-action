@@ -9,3 +9,5 @@ on:
 jobs:
   add-text:
     uses: ./.github/workflows/add-text.yaml
+    secrets:
+      PAT: ${{ secrets.CHECKOUT_TOKEN }}
